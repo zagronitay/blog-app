@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "blog-service"
+version = "0.1.0"
+description = ""
+authors = []
+readme = "README.md"
+package-mode = false
+license = "PROPRIETARY"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+[tool.poetry.group.blog.dependencies]
+blog = { path = "services/blog", develop = true }
+
+[tool.poetry.group.api.dependencies]
+api = { path = "services/api", develop = true }
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.3"
+toml = "^0.10.2"
+argparse = "^1.4.0"
+
+[tool.poetry.dev-dependencies]
+pre-commit = "^4.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
