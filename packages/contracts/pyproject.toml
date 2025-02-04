@@ -1,27 +1,18 @@
 [tool.poetry]
-name = "api"
+name = "contracts"
 version = "0.1.0"
-description = "FastAPI service that communicates with blog service"
+description = ""
 authors = ["Your Name <your.email@example.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
-fastapi = "^0.100.0"
-uvicorn = "^0.22.0"
 grpcio = "^1.51.0"
 grpcio-tools = "^1.51.0"
-pydantic = "^2.0.0"
-loguru = "^0.7.3"
-
-[tool.poetry.dependencies.contracts]
-path = "../../packages/contracts"
-develop = true
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.3.1"
 black = "^23.3.0"
 isort = "^5.12.0"
-httpx = "^0.24.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

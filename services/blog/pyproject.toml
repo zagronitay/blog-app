@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "blog"
+name = "blog-service"
 version = "0.1.0"
 description = "Blog service with gRPC interface"
 authors = ["Your Name <your.email@example.com>"]
@@ -7,9 +7,12 @@ authors = ["Your Name <your.email@example.com>"]
 [tool.poetry.dependencies]
 python = "^3.9"
 grpcio = "^1.51.0"
-grpcio-tools = "^1.51.0"
 pydantic = "^2.0.0"
 loguru = "^0.7.3"
+
+[tool.poetry.dependencies.contracts]
+path = "../../packages/contracts"
+develop = true
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.3.1"

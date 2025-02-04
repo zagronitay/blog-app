@@ -1,7 +1,7 @@
 from loguru import logger
 import grpc
 
-from generated import blog_pb2_grpc, blog_pb2
+from contracts.generated import blog_pb2, blog_pb2_grpc
 from blog.repository import BlogRepository
 from blog.models import CreatePostModel
 

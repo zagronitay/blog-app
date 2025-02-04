@@ -4,8 +4,8 @@ from typing import List
 import grpc
 
 from api.models import CreatePostRequest, PostResponse
-from generated.blog_pb2 import GetPostRequest, ListPostsRequest, Post, CreatePostRequest as GrpcCreatePostRequest
-from generated.blog_pb2_grpc import BlogServiceStub
+from contracts.generated.blog_pb2 import GetPostRequest, ListPostsRequest, Post, CreatePostRequest as GrpcCreatePostRequest
+from contracts.generated.blog_pb2_grpc import BlogServiceStub
 
 
 class BlogClient:

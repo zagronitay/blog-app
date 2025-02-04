@@ -4,7 +4,8 @@ from concurrent import futures
 import grpc
 
 from blog.service import BlogService
-from generated import blog_pb2_grpc
+from contracts.generated import blog_pb2_grpc
+
 
 def serve():
     logger.info("Starting gRPC server")

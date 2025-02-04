@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "blog-service"
+name = "blog"
 version = "0.1.0"
 description = ""
 authors = []
@@ -15,6 +15,9 @@ blog = { path = "services/blog", develop = true }
 
 [tool.poetry.group.api.dependencies]
 api = { path = "services/api", develop = true }
+
+[tool.poetry.group.contracts.dependencies]
+contracts = { path = "packages/contracts", develop = true }
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.3.3"

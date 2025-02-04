@@ -3,7 +3,7 @@
 import grpc
 import warnings
 
-from generated import blog_pb2 as generated_dot_blog__pb2
+from contracts.generated import blog_pb2 as contracts_dot_generated_dot_blog__pb2
 
 GRPC_GENERATED_VERSION = '1.69.0'
 GRPC_VERSION = grpc.__version__
@@ -18,7 +18,7 @@ except ImportError:
 if _version_not_supported:
     raise RuntimeError(
         f'The grpc package installed is at version {GRPC_VERSION},'
-        + f' but the generated code in generated/blog_pb2_grpc.py depends on'
+        + f' but the generated code in contracts/generated/blog_pb2_grpc.py depends on'
         + f' grpcio>={GRPC_GENERATED_VERSION}.'
         + f' Please upgrade your grpc module to grpcio>={GRPC_GENERATED_VERSION}'
         + f' or downgrade your generated code using grpcio-tools<={GRPC_VERSION}.'
@@ -36,18 +36,18 @@ class BlogServiceStub(object):
         """
         self.CreatePost = channel.unary_unary(
                 '/blog.BlogService/CreatePost',
-                request_serializer=generated_dot_blog__pb2.CreatePostRequest.SerializeToString,
-                response_deserializer=generated_dot_blog__pb2.Post.FromString,
+                request_serializer=contracts_dot_generated_dot_blog__pb2.CreatePostRequest.SerializeToString,
+                response_deserializer=contracts_dot_generated_dot_blog__pb2.Post.FromString,
                 _registered_method=True)
         self.GetPost = channel.unary_unary(
                 '/blog.BlogService/GetPost',
-                request_serializer=generated_dot_blog__pb2.GetPostRequest.SerializeToString,
-                response_deserializer=generated_dot_blog__pb2.Post.FromString,
+                request_serializer=contracts_dot_generated_dot_blog__pb2.GetPostRequest.SerializeToString,
+                response_deserializer=contracts_dot_generated_dot_blog__pb2.Post.FromString,
                 _registered_method=True)
         self.ListPosts = channel.unary_unary(
                 '/blog.BlogService/ListPosts',
-                request_serializer=generated_dot_blog__pb2.ListPostsRequest.SerializeToString,
-                response_deserializer=generated_dot_blog__pb2.ListPostsResponse.FromString,
+                request_serializer=contracts_dot_generated_dot_blog__pb2.ListPostsRequest.SerializeToString,
+                response_deserializer=contracts_dot_generated_dot_blog__pb2.ListPostsResponse.FromString,
                 _registered_method=True)
 
 
@@ -77,18 +77,18 @@ def add_BlogServiceServicer_to_server(servicer, server):
     rpc_method_handlers = {
             'CreatePost': grpc.unary_unary_rpc_method_handler(
                     servicer.CreatePost,
-                    request_deserializer=generated_dot_blog__pb2.CreatePostRequest.FromString,
-                    response_serializer=generated_dot_blog__pb2.Post.SerializeToString,
+                    request_deserializer=contracts_dot_generated_dot_blog__pb2.CreatePostRequest.FromString,
+                    response_serializer=contracts_dot_generated_dot_blog__pb2.Post.SerializeToString,
             ),
             'GetPost': grpc.unary_unary_rpc_method_handler(
                     servicer.GetPost,
-                    request_deserializer=generated_dot_blog__pb2.GetPostRequest.FromString,
-                    response_serializer=generated_dot_blog__pb2.Post.SerializeToString,
+                    request_deserializer=contracts_dot_generated_dot_blog__pb2.GetPostRequest.FromString,
+                    response_serializer=contracts_dot_generated_dot_blog__pb2.Post.SerializeToString,
             ),
             'ListPosts': grpc.unary_unary_rpc_method_handler(
                     servicer.ListPosts,
-                    request_deserializer=generated_dot_blog__pb2.ListPostsRequest.FromString,
-                    response_serializer=generated_dot_blog__pb2.ListPostsResponse.SerializeToString,
+                    request_deserializer=contracts_dot_generated_dot_blog__pb2.ListPostsRequest.FromString,
+                    response_serializer=contracts_dot_generated_dot_blog__pb2.ListPostsResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -116,8 +116,8 @@ class BlogService(object):
             request,
             target,
             '/blog.BlogService/CreatePost',
-            generated_dot_blog__pb2.CreatePostRequest.SerializeToString,
-            generated_dot_blog__pb2.Post.FromString,
+            contracts_dot_generated_dot_blog__pb2.CreatePostRequest.SerializeToString,
+            contracts_dot_generated_dot_blog__pb2.Post.FromString,
             options,
             channel_credentials,
             insecure,
@@ -143,8 +143,8 @@ class BlogService(object):
             request,
             target,
             '/blog.BlogService/GetPost',
-            generated_dot_blog__pb2.GetPostRequest.SerializeToString,
-            generated_dot_blog__pb2.Post.FromString,
+            contracts_dot_generated_dot_blog__pb2.GetPostRequest.SerializeToString,
+            contracts_dot_generated_dot_blog__pb2.Post.FromString,
             options,
             channel_credentials,
             insecure,
@@ -170,8 +170,8 @@ class BlogService(object):
             request,
             target,
             '/blog.BlogService/ListPosts',
-            generated_dot_blog__pb2.ListPostsRequest.SerializeToString,
-            generated_dot_blog__pb2.ListPostsResponse.FromString,
+            contracts_dot_generated_dot_blog__pb2.ListPostsRequest.SerializeToString,
+            contracts_dot_generated_dot_blog__pb2.ListPostsResponse.FromString,
             options,
             channel_credentials,
             insecure,

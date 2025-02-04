@@ -1,7 +1,7 @@
 from typing import List, Optional
 import uuid
 from datetime import datetime
-from .models import PostModel, CreatePostModel
+from blog.models import PostModel, CreatePostModel
 
 
 class BlogRepository:
