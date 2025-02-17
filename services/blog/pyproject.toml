@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "blog-service"
+name = "blog"
 version = "0.1.0"
 description = "Blog service with gRPC interface"
 authors = ["Your Name <your.email@example.com>"]
